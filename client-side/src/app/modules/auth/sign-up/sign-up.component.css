@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Ensure the container takes up at least the full viewport height */
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot {
+  display: flex;
+  justify-content: c;
+}
+
+.signupstyle{
+  margin-left: 48px;
+}

@@ -1,0 +1,85 @@
+<div class="flex flex-col flex-auto items-center sm:justify-center min-w-0 container">
+    <div class="w-full sm:w-auto py-8 px-4 sm:p-12 sm:rounded-md sm:shadow sm:bg-card ">
+        <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
+            <!-- Logo -->
+            <div class="w-10" class="mx-auto">
+                <img src="https://cdn.dribbble.com/users/6569/screenshots/16482169/media/de475cb79969a810d45ba9b5d8cbf4a5.png?resize=320x240&vertical=center"
+                    alt="Logo" />
+            </div>
+
+            <!-- Title -->
+
+
+            <!-- Alert -->
+            <!-- <fuse-alert class="mt-8 -mb-4"
+            >
+             alert.message 
+          </fuse-alert> -->
+
+            <!-- Sign in form -->
+            <form class="mt-8 signupstyle" [formGroup]="signUpForm" #signUpNgForm="ngForm">
+          
+                <mat-form-field class="w-full">
+                    <mat-label>First name </mat-label>
+                    <input id="username" formControlName="first_name"  type="text" matInput />
+                    <mat-error>
+                        Name is required
+                    </mat-error>
+                </mat-form-field><br />
+
+                <mat-form-field class="w-full">
+                    <mat-label>Last name </mat-label>
+                    <input id="last_name" formControlName="last_name"  type="text" matInput />
+                    <mat-error>
+                        Name is required
+                    </mat-error>
+                </mat-form-field><br />
+
+                <mat-form-field class="w-full">
+                    <mat-label>Email address </mat-label>
+                    <input id="email" formControlName="email"  type="text" matInput />
+                    <mat-error *ngIf="signUpForm.get('email')?.hasError('required')">
+                        Email address is required
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('email')?.hasError('email')">
+                        Please enter a valid email address
+                    </mat-error>
+                </mat-form-field>
+                <br />
+
+                <mat-form-field class="w-full">
+                    <mat-label>Phone </mat-label>
+                    <input id="phone" formControlName="phone"  type="text" matInput />
+                    <mat-error *ngIf="signUpForm.get('phone')?.hasError('required')">
+                        Phone number is required
+                    </mat-error>
+                    <mat-error *ngIf="signUpForm.get('phone')">
+                        Please enter a 10 digit number
+                    </mat-error>
+                </mat-form-field><br />
+
+                <!-- Password field -->
+                <mat-form-field class="w-full">
+                    <mat-label>Password</mat-label>
+                    <input id="password" formControlName="password"  matInput type="password" #passwordField />
+                    <mat-error> Password is required </mat-error>
+                </mat-form-field>
+
+                <!-- Actions -->
+                <div class="inline-flex items-end justify-between w-full mt-1.5 forgot">
+                    <div>Already have an account?</div>
+                    <a class="text-md font-medium text-primary-500 hover:underline" [routerLink]="['/']">Log In
+                    </a>
+                </div>
+
+                <!-- Submit button -->
+                <div class="centered mt-5">
+
+                    <button class="fuse-mat-button-large w-full mt-5 ml-4" mat-flat-button [color]="'primary'" (click)="submit()" >
+                        <span> Sign Up </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

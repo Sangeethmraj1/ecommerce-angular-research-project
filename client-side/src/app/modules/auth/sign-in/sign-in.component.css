@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup{
+  display: flex;
+  justify-content: center;
+}
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signinform{
+  margin-left: 48px;
+}

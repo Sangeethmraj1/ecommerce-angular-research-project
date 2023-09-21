@@ -1,0 +1,56 @@
+<div class="flex flex-col flex-auto items-center sm:justify-center min-w-0 container">
+  <div class="w-full sm:w-auto py-8 px-4 sm:p-12 sm:rounded-md sm:shadow sm:bg-card ">
+    <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
+      <!-- Logo -->
+      <div class="w-12" class="mx-auto">
+       
+        <img
+          src="https://cdn.dribbble.com/users/6569/screenshots/16482169/media/de475cb79969a810d45ba9b5d8cbf4a5.png?resize=320x240&vertical=center"
+          alt="Logo" />
+      </div>
+
+
+      <form class="mt-8 signinform" [formGroup]="signInForm" #signInNgForm="ngForm">
+        <!-- Email field -->
+        <mat-form-field class="w-full">
+          <mat-label>Email address </mat-label>
+          <input id="username" formControlName="username" type="text" matInput />
+          <mat-error>
+            Email address is required
+          </mat-error>
+          <mat-error>
+            Please enter a valid email address
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <!-- Password field -->
+        <mat-form-field class="w-full">
+          <mat-label>Password</mat-label>
+          <input id="password" formControlName="password" matInput type="password" #passwordField />
+         
+          <mat-error> Password is required </mat-error>
+        </mat-form-field>
+
+        <!-- Actions -->
+        <div class="inline-flex items-end  w-full mt-1.5 forgot">
+          <div></div>
+          <a class="text-md font-medium text-primary-500 hover:underline" [routerLink]="['/sign-up']">Forgot Password
+          </a>
+        </div>
+        <div class="inline-flex items-end justify-between w-full mt-1.5 signup">
+          <div>Don't have an account?</div>
+          <a class="text-md font-medium text-primary-500 hover:underline" [routerLink]="['/sign-up']">SignUp
+          </a>
+        </div>
+
+        <!-- Submit button -->
+        <div class="centered mt-5">
+
+          <button class="fuse-mat-button-large w-full mt-5 ml-4" mat-flat-button [color]="'primary'" (click)="Submit()">
+            <span> Sign in </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

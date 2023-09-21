@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    padding: 10px;
+    font-weight: bolder;
+}
+.logout{
+    margin-top: 4px;
+    padding: 10px;
+}
+p{
+    margin-top: 8px;
+    margin-left: 30px;
+    cursor: pointer;
+}
