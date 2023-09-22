@@ -56,7 +56,6 @@ export class CategoryFormComponent implements OnInit {
     if (this.categoryForm.invalid) {
       return;
     }
-    if(this.fileChange){{}}
     const formData = new FormData()
     console.log(this.file);
     for (const value in this.categoryForm.value) {

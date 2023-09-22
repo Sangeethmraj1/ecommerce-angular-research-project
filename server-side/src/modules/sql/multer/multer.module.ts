@@ -9,8 +9,8 @@ import * as multerS3 from 'multer-s3';
 
 const s3 = new S3Client({
   credentials:{
-      accessKeyId:'AKIAY44UW65BAMCCUK2J',
-      secretAccessKey:'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'
+      accessKeyId:'',
+      secretAccessKey:''
   },
   region:'us-east-1'
 })
