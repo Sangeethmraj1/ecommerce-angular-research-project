@@ -9,13 +9,12 @@
                         <div class="bnr_left">
                             <div class="bnr_hd">
                                 <h1>
-                                    <span>Learning Courses </span>
-                                    <span>by Top Instructors </span>
+                                    <span>Get with the premium </span>
+                                    <span>by Apple Products </span>
                                 </h1>
                             </div>
                             <div class="bnr_hd">
-                                <p>Choose from over 4.000 courses on topics like Web Design, Web Development, Mobile
-                                    Development, and much more
+                                <p>Get up to ₹8000.00 instant savings on selected products with eligible HDFC Bank cards
                                 </p>
                             </div>
 
@@ -51,60 +50,20 @@
 
             <div class=''>
                 <div class="col-lg-4 cs_col product">
-                    <div class="cs_col_in">
+                    <div *ngFor="let category of categories" class="cs_col_in">
                         <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
+                            <img                
+                             [src]="category.avatar || 'assets/images/no-image-user.png'"
+                             width="150px">
+                             
                         </div>
                         <div class="stars_item">
                             <div class="star_left">
-                                <span>Mobile</span>
+                                <h1>{{category.name}}</h1>
                             </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
                         </div>
                         <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
+                            <button mat-raised-button color="primary">View Products</button>
                         </div>
                     </div>
                 </div>
@@ -128,154 +87,30 @@
 
             <div class='products'>
 
-                <div class="col-lg-4 cs_col">
+                <div *ngFor="let product of products" class="col-lg-4 cs_col">
                     <div class="cs_col_in">
                         <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
+                            <img  [src]="product.avatar || 'assets/images/no-image-user.png'"
+                            width="180px" height="200px"/>
                         </div>
                         <div class="stars_item">
                             <div class="star_left">
-                                <span>Mobile</span>
+                                <span>{{product.name}}</span>
                             </div>
 
                         </div>
+                        <div class="cs_hd star_left">
+                            <span>{{product.category}}</span>
+                        </div>
+
                         <div class="cs_hd">
-                            <h2>Iphone 15</h2>
+                            <h2>{{product.price}}</h2>
                         </div>
                         <div class="cs_btn">
                             <button mat-raised-button color="primary">Add to cart</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 cs_col">
-                    <div class="cs_col_in">
-                        <div class="cs_img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTVAq0pwQV1a5oyLfCwR99_VDSVTD5tqAULRQxQv18&s"
-                                alt="" />
-                        </div>
-                        <div class="stars_item">
-                            <div class="star_left">
-                                <span>Mobile</span>
-                            </div>
-
-                        </div>
-                        <div class="cs_hd">
-                            <h2>Iphone 15</h2>
-                        </div>
-                        <div class="cs_btn">
-                            <button mat-raised-button color="primary">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
 

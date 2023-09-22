@@ -69,7 +69,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
           return of(false);
         }
         this.userRoute = ['/home']
-        this.adminRoute = ['/users', '/category']
+        this.adminRoute = ['/users', '/category','/products']
         
         if (this.role === 'User') {
           this.isUser = this.userRoute.some((path) => url === path)

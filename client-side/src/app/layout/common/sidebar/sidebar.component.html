@@ -10,7 +10,7 @@
         <a class="tabs" [routerLink]="['/category']">
             <h3>Category</h3>
         </a>
-        <a class="tabs" href="">
+        <a class="tabs" [routerLink]="['/products']">
             <h3>Product</h3>
         </a>
         <a class="tabs" href="">
@@ -19,6 +19,7 @@
         <a class="tabs" href="">
             <h3>Products</h3>
         </a>
+        <button mat-flat-button color="primary" class="lgt_btn" (click)="logout()">Logout</button>
 
     </div>
 </div>

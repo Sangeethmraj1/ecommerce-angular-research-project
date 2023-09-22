@@ -14,13 +14,15 @@ export class ApiServices {
         entity: string,
         body: any
     ): Observable<any> {
+        console.log('createaaaa',entity,body);
+        
         return this.httpClient.post(entity, body)
     }
 
     getAll(
-        entity: string,
-        query: any): Observable<any> {
-        return this.httpClient.get(entity, { params: { status: query } })
+        entity: string
+        ): Observable<any> {
+        return this.httpClient.get(entity)
     }
 
     findById(

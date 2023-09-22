@@ -51,6 +51,11 @@ export const Routes: Route[] = [
                 path:'category',
                 loadChildren:()=>
                 import('../app/modules/admin/category/category.module').then(m=>m.CategoryModule)
+            },
+            {
+                path:'products',
+                loadChildren:()=>
+                import('../app/modules/admin/product/product.module').then(m=>m.ProductModule)
             }
         ]
     }

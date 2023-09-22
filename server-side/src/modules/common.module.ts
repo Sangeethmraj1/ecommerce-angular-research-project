@@ -18,6 +18,9 @@ import { UserModule } from './sql/user/user.module';
 import { JwtAuthGuard } from './sql/auth/strategies/jwt/jwt-auth.guard';
 import { RolesGuard } from './sql/auth/roles.guard';
 import { SettingsInterceptor } from 'src/core/interceptors/sql/settings.interceptors';
+import { MulterFileModule } from './sql/multer/multer.module';
+import { CategoryModule } from './sql/category/category.module';
+import { ProductModule } from './sql/product/product.module';
 
 @Module({})
 export class CommonModule {
@@ -38,6 +41,9 @@ export class CommonModule {
       StateModule,
       TemplateModule,
       UserModule,
+      MulterFileModule,
+      CategoryModule,
+      ProductModule
     ];
 
     // common providers

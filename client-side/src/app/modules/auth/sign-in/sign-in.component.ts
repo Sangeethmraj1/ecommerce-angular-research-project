@@ -44,7 +44,7 @@ export class SignInComponent implements OnInit {
           this.router.navigateByUrl('/home')
 
         }else{
-          this.router.navigateByUrl('/dashboard')
+          this.router.navigateByUrl('/users')
         }
         this.toast.success('Login successfull')
       },
